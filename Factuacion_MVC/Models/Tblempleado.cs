@@ -1,10 +1,13 @@
-﻿using System;
+﻿using MessagePack;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Factuacion_MVC.Models;
 
 public partial class Tblempleado
 {
+    [System.ComponentModel.DataAnnotations.Key]
     public int IdEmpleado { get; set; }
 
     public string StrNombre { get; set; } = null!;
@@ -19,12 +22,18 @@ public partial class Tblempleado
 
     public int? IdRolEmpleado { get; set; }
 
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime? DtmIngreso { get; set; }
 
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime? DtmRetiro { get; set; }
 
     public string? StrDatosAdicionales { get; set; }
 
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime? DtmFechaModifica { get; set; }
 
     public string? StrUsuarioModifico { get; set; }

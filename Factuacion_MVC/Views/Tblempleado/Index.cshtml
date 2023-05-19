@@ -8,20 +8,25 @@
 
     <h1 class="mt-2 titulos">Administrar <b>Empleados</b></h1>
 
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="search-box w-100">
-                <i class="bi bi-search"></i>
-                <input type="text" class="form-control" placeholder="Buscar&hellip;">
+    <form asp-controller="Tblempleado" asp-action="Index">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="search-box d-flex w-100">
+                    <button type="submit" class="btn ">
+                        <i class="bi bi-search"></i>     
+                    </button>
+                    <input type="text" name="buscar" class="form-control " placeholder="Buscar&hellip;" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p>
+                    <a asp-action="Create" class="btn btn-outline-info">+ Agregar</a>
+                </p>
+
             </div>
         </div>
-        <div class="col-sm-4">
-            <p>
-                <a asp-action="Create" class="btn btn-outline-info">+ Agregar</a>
-            </p>
-
-        </div>
-    </div>
+    </form>
+    
     <table class="table table-hover table-bordered">
         <thead>
             <tr>

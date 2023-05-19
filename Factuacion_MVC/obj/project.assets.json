@@ -10840,11 +10840,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Factuacion_MVC\\Factuacion_MVC\\Factuacion_MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Facturacion_mvc\\Factuacion_MVC\\Factuacion_MVC.csproj",
       "projectName": "Factuacion_MVC",
-      "projectPath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Factuacion_MVC\\Factuacion_MVC\\Factuacion_MVC.csproj",
+      "projectPath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Facturacion_mvc\\Factuacion_MVC\\Factuacion_MVC.csproj",
       "packagesPath": "C:\\Users\\Miguel Pérez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Factuacion_MVC\\Factuacion_MVC\\obj\\",
+      "outputPath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Facturacion_mvc\\Factuacion_MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel Pérez\\AppData\\Roaming\\NuGet\\NuGet.Config",

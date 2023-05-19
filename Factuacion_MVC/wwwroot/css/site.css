@@ -43,7 +43,7 @@ body {
     border-color: #3FBAE4;
 }
 
-.search-box i {
+.search-box .bi-search {
     cursor:pointer;
     color: #a0a5b1;
     position: absolute;

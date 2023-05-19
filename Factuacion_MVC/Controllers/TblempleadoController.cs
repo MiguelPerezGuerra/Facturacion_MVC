@@ -19,10 +19,16 @@ namespace Factuacion_MVC.Controllers
         }
 
         // GET: Tblempleado
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var dbfacturasContext = _context.Tblempleados.Include(t => t.IdRolEmpleadoNavigation);
-            return View(await dbfacturasContext.ToListAsync());
+            var empleado = from Tblempleado in _context.Tblempleados select Tblempleado;
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                empleado = empleado.Where(s => s.StrNombre!.Contains(buscar));
+            }
+
+            return View(await empleado.ToListAsync());
         }
 
         // GET: Tblempleado/Details/5
@@ -47,7 +53,7 @@ namespace Factuacion_MVC.Controllers
         // GET: Tblempleado/Create
         public IActionResult Create()
         {
-            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "IdRolEmpleado");
+            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "StrDescripcion");
             return View();
         }
 
@@ -60,11 +66,14 @@ namespace Factuacion_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                tblempleado.DtmFechaModifica = DateTime.Now;
+                tblempleado.StrUsuarioModifico = "Javier";
+
                 _context.Add(tblempleado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "IdRolEmpleado", tblempleado.IdRolEmpleado);
+            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "StrDescripcion", tblempleado.IdRolEmpleado);
             return View(tblempleado);
         }
 
@@ -81,7 +90,7 @@ namespace Factuacion_MVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "IdRolEmpleado", tblempleado.IdRolEmpleado);
+            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "StrDescripcion", tblempleado.IdRolEmpleado);
             return View(tblempleado);
         }
 
@@ -90,7 +99,7 @@ namespace Factuacion_MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEmpleado,StrNombre,NumDocumento,StrDireccion,StrTelefono,StrEmail,IdRolEmpleado,DtmIngreso,DtmRetiro,StrDatosAdicionales,DtmFechaModifica,StrUsuarioModifico")] Tblempleado tblempleado)
+        public async Task<IActionResult> Edit(int id, [Bind($"IdEmpleado,StrNombre,NumDocumento,StrDireccion,StrTelefono,StrEmail,IdRolEmpleado,DtmIngreso,DtmRetiro,StrDatosAdicionales,DtmFechaModifica,StrUsuarioModifico")] Tblempleado tblempleado)
         {
             if (id != tblempleado.IdEmpleado)
             {
@@ -101,6 +110,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblempleado.DtmFechaModifica = DateTime.Now;
+                    tblempleado.StrUsuarioModifico = "Javier";
+
                     _context.Update(tblempleado);
                     await _context.SaveChangesAsync();
                 }
@@ -117,7 +129,7 @@ namespace Factuacion_MVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "IdRolEmpleado", tblempleado.IdRolEmpleado);
+            ViewData["IdRolEmpleado"] = new SelectList(_context.Tblroles, "IdRolEmpleado", "StrDescripcion", tblempleado.IdRolEmpleado);
             return View(tblempleado);
         }
 

@@ -1,0 +1,71 @@
+﻿@model Factuacion_MVC.Models.Tblcliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container-fluid m-2">
+    <h1 class="mt-2 titulos">Eliminar</h1>
+
+    <div class="row">
+        
+        <h4 class="mt-2 titulos">Cliente</h4>
+        <hr />
+        <h3 class="mb-2 ms-4 fw-normal">¿Seguro de eliminar esto?</h3>
+        <div class="col-6">
+            <dl class="row ms-3">
+                <dt class = "col-sm-4">
+                    Nombre:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrNombre)
+                </dd>
+                <dt class = "col-sm-4">
+                    Documento:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.NumDocumento)
+                </dd>
+                <dt class = "col-sm-4">
+                    Dirección:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrDireccion)
+                </dd>
+                <dt class = "col-sm-4">
+                    Telefono:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrTelefono)
+                </dd>
+                <dt class = "col-sm-4">
+                    Email:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrEmail)
+                </dd>
+                <dt class = "col-sm-4">
+                    Fecha Modificación:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.DtmFechaModifica)
+                </dd>
+                <dt class = "col-sm-4">
+                    Usuario Modifico:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrUsuarioModifica)
+                </dd>
+
+                <div class="d-flex w-50 justify-content-center align-items-center mt-3">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdCliente" />
+                        <input type="submit" value="Eliminar" class="btn btn-outline-danger me-2" />
+                        <a asp-action="Index" class="btn btn-outline-warning ms-2">Cancelar</a>
+                    </form>
+                </div>
+            </dl>     
+        </div>
+
+    </div>
+</div>

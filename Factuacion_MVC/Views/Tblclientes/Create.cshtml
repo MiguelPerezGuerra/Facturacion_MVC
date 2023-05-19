@@ -1,0 +1,69 @@
+﻿@model Factuacion_MVC.Models.Tblcliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid m-2">
+    <h1 class="mt-2 titulos"><b>Agregar</b></h1>
+
+    <h4 class="mt-2 titulos">Cliente</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4 ms-3">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group  mb-2">
+                    <label asp-for="StrNombre" class="control-label">Nombre</label>
+                    <input asp-for="StrNombre" class="form-control" />
+                    <span asp-validation-for="StrNombre" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="NumDocumento" class="control-label">Documento</label>
+                    <input asp-for="NumDocumento" class="form-control" />
+                    <span asp-validation-for="NumDocumento" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="StrDireccion" class="control-label">Dirección</label>
+                    <input asp-for="StrDireccion" class="form-control" />
+                    <span asp-validation-for="StrDireccion" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="StrTelefono" class="control-label">Telefono</label>
+                    <input asp-for="StrTelefono" class="form-control" />
+                    <span asp-validation-for="StrTelefono" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="StrEmail" class="control-label">Email</label>
+                    <input asp-for="StrEmail" class="form-control" />
+                    <span asp-validation-for="StrEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="DtmFechaModifica" class="control-label">Fecha Modificación</label>
+                    <input asp-for="DtmFechaModifica" class="form-control" />
+                    <span asp-validation-for="DtmFechaModifica" class="text-danger"></span>
+                </div>
+                <div class="form-group  mb-2">
+                    <label asp-for="StrUsuarioModifica" class="control-label">Usuario que Modifica</label>
+                    <input asp-for="StrUsuarioModifica" class="form-control" />
+                    <span asp-validation-for="StrUsuarioModifica" class="text-danger"></span>
+                </div>
+                <div class="d-flex mx-auto justify-content-center align-items-center">
+                    <div class="form-group m-2">
+                        <input type="submit" value="Crear" class="btn btn-outline-success ps-4 pe-4" />
+                    </div>
+                    <div class="m-2">
+                        <a asp-action="Index" class="btn btn-outline-danger ">Cancelar</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

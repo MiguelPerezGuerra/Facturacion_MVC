@@ -1,0 +1,48 @@
+﻿@model Factuacion_MVC.Models.Tblseguridad
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tblseguridad</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StrUsuario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StrUsuario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StrClave)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StrClave)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DtmFechaModifica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DtmFechaModifica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StrUsuarioModifico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StrUsuarioModifico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdEmpleadoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdEmpleadoNavigation.IdEmpleado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdSeguridad">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

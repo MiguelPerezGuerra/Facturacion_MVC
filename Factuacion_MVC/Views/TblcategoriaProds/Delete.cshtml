@@ -1,0 +1,48 @@
+﻿@model Factuacion_MVC.Models.TblcategoriaProd
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container-fluid m-2">
+    <h1 class="mt-2 titulos">Eliminar</h1>
+
+    <div class="row">
+
+        <h4 class="mt-2 titulos">Categoria Producto</h4>
+        <hr />
+        <h3 class="mb-4 ms-4 fw-normal">¿Seguro de eliminar esto?</h3>
+        <div class="col-6">
+            <dl class="row ms-3">
+
+                <dt class = "col-sm-4">
+                    Nombre Producto:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrDescripcion)
+                </dd>
+                <dt class = "col-sm-4">
+                    Fecha Modificación:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.DtmFechaModifica)
+                </dd>
+                <dt class = "col-sm-4">
+                    Usuario Modificación:
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrUsuarioModifico)
+                </dd>
+
+                <div class="d-flex w-50 justify-content-center align-items-center mt-3">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdCategoria" />
+                        <input type="submit" value="Eliminar" class="btn btn-outline-danger me-2" />
+                        <a asp-action="Index" class="btn btn-outline-warning ms-2">Cancelar</a>
+                    </form>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+</div>

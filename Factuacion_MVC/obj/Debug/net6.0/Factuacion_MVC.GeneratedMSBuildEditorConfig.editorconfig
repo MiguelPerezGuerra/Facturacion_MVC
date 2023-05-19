@@ -1,0 +1,233 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Factuacion_MVC
+build_property.RootNamespace = Factuacion_MVC
+build_property.ProjectDir = C:\Users\Miguel Pérez\Documents\Repository\PascualBravo\Factuacion_MVC\Factuacion_MVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Miguel Pérez\Documents\Repository\PascualBravo\Factuacion_MVC\Factuacion_MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Principal/Acerca.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEFjZXJjYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Principal/Ayuda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEF5dWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Principal/Contacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXENvbnRhY3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Principal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblcategoriaProds/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2F0ZWdvcmlhUHJvZHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblcategoriaProds/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2F0ZWdvcmlhUHJvZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblcategoriaProds/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2F0ZWdvcmlhUHJvZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblcategoriaProds/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2F0ZWdvcmlhUHJvZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblcategoriaProds/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2F0ZWdvcmlhUHJvZHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblclientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblclientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblclientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblclientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblclientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsY2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TbldetalleFacturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZGV0YWxsZUZhY3R1cmFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TbldetalleFacturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZGV0YWxsZUZhY3R1cmFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TbldetalleFacturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZGV0YWxsZUZhY3R1cmFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TbldetalleFacturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZGV0YWxsZUZhY3R1cmFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TbldetalleFacturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZGV0YWxsZUZhY3R1cmFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblempleado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZW1wbGVhZG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblempleado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZW1wbGVhZG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblempleado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZW1wbGVhZG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblempleado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZW1wbGVhZG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblempleado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZW1wbGVhZG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblestadoFacturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZXN0YWRvRmFjdHVyYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblestadoFacturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZXN0YWRvRmFjdHVyYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblestadoFacturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZXN0YWRvRmFjdHVyYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblestadoFacturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZXN0YWRvRmFjdHVyYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/TblestadoFacturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZXN0YWRvRmFjdHVyYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblfacturas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZmFjdHVyYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblfacturas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZmFjdHVyYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblfacturas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZmFjdHVyYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblfacturas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZmFjdHVyYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblfacturas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsZmFjdHVyYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblproductoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscHJvZHVjdG9lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblproductoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscHJvZHVjdG9lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblproductoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscHJvZHVjdG9lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblproductoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscHJvZHVjdG9lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblproductoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscHJvZHVjdG9lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblroles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblroles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscm9sZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblroles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscm9sZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblroles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblroles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJscm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblseguridad/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsc2VndXJpZGFkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblseguridad/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsc2VndXJpZGFkXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblseguridad/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsc2VndXJpZGFkXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblseguridad/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsc2VndXJpZGFkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Tblseguridad/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGJsc2VndXJpZGFkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Miguel Pérez/Documents/Repository/PascualBravo/Factuacion_MVC/Factuacion_MVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ab2tbumdk4

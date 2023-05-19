@@ -1,0 +1,84 @@
+﻿@model Factuacion_MVC.Models.Tblfactura
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container-fluid m-2">
+    <h1 class="mt-2 titulos">Eliminar</h1>
+
+    <div class="row">
+
+        <h4 class="mt-2 titulos">Factura</h4>
+        <hr />
+        <h3 class="mb-2 ms-4 fw-normal">¿Seguro de eliminar esto?</h3>
+        <div class="col-6">
+            <dl class="row ms-3">
+
+                <dt class = "col-sm-4">
+                    Fecha
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.DtmFecha)
+                </dd>
+                <dt class = "col-sm-4">
+                    Precio de Descuento
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.NumDescuento)
+                </dd>
+                <dt class = "col-sm-4">
+                    Valor Impuesto
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.NumImpuesto)
+                </dd>
+                <dt class = "col-sm-4">
+                    Valor Total
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.NumValorTotal)
+                </dd>
+                <dt class = "col-sm-4">
+                    Fecha Modificación
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.DtmFechaModifica)
+                </dd>
+                <dt class = "col-sm-4">
+                    Usuario Modifica
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.StrUsuarioModifica)
+                </dd>
+                <dt class = "col-sm-4">
+                    ID Cliente
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.IdClienteNavigation.IdCliente)
+                </dd>
+                <dt class = "col-sm-4">
+                    ID Empleado
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.IdEmpleadoNavigation.IdEmpleado)
+                </dd>
+                <dt class = "col-sm-4">
+                    ID Estado
+                </dt>
+                <dd class = "col-sm-8">
+                    @Html.DisplayFor(model => model.IdEstadoNavigation.IdEstadoFactura)
+                </dd>
+
+                <div class="d-flex w-50 justify-content-center align-items-center mt-3">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdFactura" />
+                        <input type="submit" value="Eliminar" class="btn btn-outline-danger me-2" />
+                        <a asp-action="Index" class="btn btn-outline-warning ms-2">Cancelar</a>
+                    </form>
+                </div>
+
+            </dl>
+        </div>
+    </div>
+</div>

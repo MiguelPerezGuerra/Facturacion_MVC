@@ -1,0 +1,86 @@
+﻿@model Factuacion_MVC.Models.Tblproducto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container-fluid m-2">
+    <h1 class="mt-2 titulos">Detalles</h1>
+
+    <div class="row">
+
+        <h4 class="mt-2 titulos">Productos</h4>
+        <hr />
+        <div class="col-6">
+    
+            <dl class="row ms-3">
+                <dt class="col-sm-4">
+                    Nombre:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StrNombre)
+                </dd>
+                <dt class="col-sm-4">
+                    Codigo:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StrCodigo)
+                </dd>
+                <dt class="col-sm-4">
+                    Precio de Compra:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NumPrecioCompra)
+                </dd>
+                <dt class="col-sm-4">
+                    Precio de Venta:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NumPrecioVenta)
+                </dd>
+                <dt class="col-sm-4">
+                    Detalle:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StrDetalle)
+                </dd>
+                <dt class="col-sm-4">
+                    Foto:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StrFoto)
+                </dd>
+                <dt class="col-sm-4">
+                    Stock:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NumStock)
+                </dd>
+                <dt class="col-sm-4">
+                    Fecha Modificación:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.DtmFechaModifica)
+                </dd>
+                <dt class="col-sm-4">
+                    Usuario Midifica:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.StrUsuarioModifica)
+                </dd>
+                <dt class="col-sm-4">
+                    ID Categoria:
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.IdCategoriaNavigation.IdCategoria)
+                </dd>
+            </dl>
+
+            <div class="d-flex w-50 justify-content-center align-items-center">
+                <a asp-action="Edit" class="btn btn-outline-primary me-2" asp-route-id="@Model?.IdProducto">Editar</a>
+                <a asp-action="Index" class="btn btn-outline-warning ms-2">Volver</a>
+            </div>
+
+        </div>
+    </div>
+</div>

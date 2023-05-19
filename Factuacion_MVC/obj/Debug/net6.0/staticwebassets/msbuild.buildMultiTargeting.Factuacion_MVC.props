@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Factuacion_MVC.props" />
+</Project>

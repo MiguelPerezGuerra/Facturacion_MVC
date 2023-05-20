@@ -11,8 +11,8 @@
 
         <h4 class="mt-2 titulos">Producto</h4>
         <hr />
-        <h3 class="mb-2 ms-4 fw-normal">¿Seguro de eliminar esto?</h3>
-        <div class="col-6">
+        <h3 class="mb-2 ms-4 mb-2 fw-normal">¿Seguro de eliminar esto?</h3>
+        <div class="col-6 w-50">
             <dl class="row ms-3">
 
                 <dt class = "col-sm-4">
@@ -58,22 +58,10 @@
                     @Html.DisplayFor(model => model.NumStock)
                 </dd>
                 <dt class = "col-sm-4">
-                    Fecha Modificación:
+                    Categoria:
                 </dt>
                 <dd class = "col-sm-8">
-                    @Html.DisplayFor(model => model.DtmFechaModifica)
-                </dd>
-                <dt class = "col-sm-4">
-                    Usuario Midifica:
-                </dt>
-                <dd class = "col-sm-8">
-                    @Html.DisplayFor(model => model.StrUsuarioModifica)
-                </dd>
-                <dt class = "col-sm-4">
-                    ID Categoria:
-                </dt>
-                <dd class = "col-sm-8">
-                    @Html.DisplayFor(model => model.IdCategoriaNavigation.IdCategoria)
+                    @Html.DisplayFor(model => model.IdCategoriaNavigation.StrDescripcion)
                 </dd>
 
                 <div class="d-flex w-50 justify-content-center align-items-center mt-3">

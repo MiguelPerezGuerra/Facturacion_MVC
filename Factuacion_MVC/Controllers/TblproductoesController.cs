@@ -19,11 +19,23 @@ namespace Factuacion_MVC.Controllers
         }
 
         // GET: Tblproductoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var dbfacturasContext = _context.Tblproductos.Include(t => t.IdCategoriaNavigation);
-            return View(await dbfacturasContext.ToListAsync());
+            var productos = from Tblproducto in _context.Tblproductos select Tblproducto;
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                productos = productos.Where(p => p.StrNombre.Contains(buscar));
+            }
+
+            productos = productos.Include(p => p.IdCategoriaNavigation);
+
+            return View(await productos.ToListAsync());
+
+            //var dbfacturasContext = _context.Tblproductos.Include(t => t.IdCategoriaNavigation);
+            //return View(await dbfacturasContext.ToListAsync());
         }
+
 
         // GET: Tblproductoes/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -47,7 +59,7 @@ namespace Factuacion_MVC.Controllers
         // GET: Tblproductoes/Create
         public IActionResult Create()
         {
-            ViewData["IdCategoria"] = new SelectList(_context.TblcategoriaProds, "IdCategoria", "IdCategoria");
+            ViewData["IdCategoria"] = new SelectList(_context.TblcategoriaProds, "IdCategoria", "StrDescripcion");
             return View();
         }
 
@@ -56,10 +68,13 @@ namespace Factuacion_MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdProducto,StrNombre,StrCodigo,NumPrecioCompra,NumPrecioVenta,IdCategoria,StrDetalle,StrFoto,NumStock,DtmFechaModifica,StrUsuarioModifica")] Tblproducto tblproducto)
+        public async Task<IActionResult> Create([Bind("IdProducto,StrNombre,StrCodigo,NumPrecioCompra,NumPrecioVenta,IdCategoria,StrDetalle,StrFoto,NumStock")] Tblproducto tblproducto)
         {
             if (ModelState.IsValid)
             {
+                tblproducto.DtmFechaModifica = DateTime.Now;
+                tblproducto.StrUsuarioModifica = "Miguel";
+
                 _context.Add(tblproducto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -81,7 +96,9 @@ namespace Factuacion_MVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCategoria"] = new SelectList(_context.TblcategoriaProds, "IdCategoria", "IdCategoria", tblproducto.IdCategoria);
+
+            ViewData["IdCategoria"] = new SelectList(_context.TblcategoriaProds, "IdCategoria", "StrDescripcion", tblproducto.IdCategoria);
+            
             return View(tblproducto);
         }
 
@@ -90,7 +107,7 @@ namespace Factuacion_MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdProducto,StrNombre,StrCodigo,NumPrecioCompra,NumPrecioVenta,IdCategoria,StrDetalle,StrFoto,NumStock,DtmFechaModifica,StrUsuarioModifica")] Tblproducto tblproducto)
+        public async Task<IActionResult> Edit(int id, [Bind("IdProducto,StrNombre,StrCodigo,NumPrecioCompra,NumPrecioVenta,IdCategoria,StrDetalle,StrFoto,NumStock")] Tblproducto tblproducto)
         {
             if (id != tblproducto.IdProducto)
             {
@@ -101,6 +118,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblproducto.DtmFechaModifica = DateTime.Now;
+                    tblproducto.StrUsuarioModifica = "Miguel";
+
                     _context.Update(tblproducto);
                     await _context.SaveChangesAsync();
                 }

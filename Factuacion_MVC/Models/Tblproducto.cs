@@ -5,6 +5,7 @@ namespace Factuacion_MVC.Models;
 
 public partial class Tblproducto
 {
+
     public int IdProducto { get; set; }
 
     public string StrNombre { get; set; } = null!;

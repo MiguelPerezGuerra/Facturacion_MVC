@@ -19,11 +19,21 @@ namespace Factuacion_MVC.Controllers
         }
 
         // GET: Tblroles
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-              return _context.Tblroles != null ? 
-                          View(await _context.Tblroles.ToListAsync()) :
-                          Problem("Entity set 'DbfacturasContext.Tblroles'  is null.");
+
+            var roles = from Tblrole in _context.Tblroles select Tblrole;
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                roles = roles.Where(s => s.StrDescripcion!.Contains(buscar));
+            }
+
+            return View(await roles.ToListAsync());
+
+              //return _context.Tblroles != null ? 
+              //            View(await _context.Tblroles.ToListAsync()) :
+              //            Problem("Entity set 'DbfacturasContext.Tblroles'  is null.");
         }
 
         // GET: Tblroles/Details/5

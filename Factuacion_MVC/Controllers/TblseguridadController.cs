@@ -47,7 +47,7 @@ namespace Factuacion_MVC.Controllers
         // GET: Tblseguridad/Create
         public IActionResult Create()
         {
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado");
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre");
             return View();
         }
 
@@ -60,11 +60,14 @@ namespace Factuacion_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                tblseguridad.DtmFechaModifica = DateTime.Now;
+                tblseguridad.StrUsuarioModifico = "Miguel";
+
                 _context.Add(tblseguridad);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblseguridad.IdEmpleado);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblseguridad.IdEmpleado);
             return View(tblseguridad);
         }
 
@@ -81,7 +84,7 @@ namespace Factuacion_MVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblseguridad.IdEmpleado);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblseguridad.IdEmpleado);
             return View(tblseguridad);
         }
 
@@ -101,6 +104,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblseguridad.DtmFechaModifica = DateTime.Now;
+                    tblseguridad.StrUsuarioModifico = "Miguel";
+
                     _context.Update(tblseguridad);
                     await _context.SaveChangesAsync();
                 }
@@ -117,7 +123,7 @@ namespace Factuacion_MVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblseguridad.IdEmpleado);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblseguridad.IdEmpleado);
             return View(tblseguridad);
         }
 

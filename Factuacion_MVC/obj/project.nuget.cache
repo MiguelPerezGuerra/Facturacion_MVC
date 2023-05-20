@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WyPLyG41IMhpXllxgz21Px0FJq+VVE/g6BDCVhTTI6T6NaC3AF3bejLgHqUyRlRfUnebjiLM3g2IW75I15XlEg==",
+  "dgSpecHash": "Ak2HDt0Kj6Zt7jNV+BE0LrFqchv2Do3FgBG/qrdNqOC6xBsftbTQ0xE0SrLtg3+ABpGT76ah/pQ05qorC7k4cA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Facturacion_mvc\\Factuacion_MVC\\Factuacion_MVC.csproj",
+  "projectFilePath": "C:\\Users\\Miguel Pérez\\Documents\\Repository\\PascualBravo\\Factuacion_MVC\\Factuacion_MVC\\Factuacion_MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel Pérez\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Miguel Pérez\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

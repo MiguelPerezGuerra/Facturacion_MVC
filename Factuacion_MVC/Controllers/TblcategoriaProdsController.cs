@@ -19,11 +19,16 @@ namespace Factuacion_MVC.Controllers
         }
 
         // GET: TblcategoriaProds
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-              return _context.TblcategoriaProds != null ? 
-                          View(await _context.TblcategoriaProds.ToListAsync()) :
-                          Problem("Entity set 'DbfacturasContext.TblcategoriaProds'  is null.");
+            var categoria = from TblcategoriaProd in _context.TblcategoriaProds select TblcategoriaProd;
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                categoria = categoria.Where(s => s.StrDescripcion!.Contains(buscar));
+
+            }
+            return View(await categoria.ToListAsync());
         }
 
         // GET: TblcategoriaProds/Details/5
@@ -59,6 +64,9 @@ namespace Factuacion_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                tblcategoriaProd.DtmFechaModifica = DateTime.Now;
+                tblcategoriaProd.StrUsuarioModifico = "Javier";
+
                 _context.Add(tblcategoriaProd);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +106,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblcategoriaProd.DtmFechaModifica = DateTime.Now;
+                    tblcategoriaProd.StrUsuarioModifico = "Javier";
+
                     _context.Update(tblcategoriaProd);
                     await _context.SaveChangesAsync();
                 }

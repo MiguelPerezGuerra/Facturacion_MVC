@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Factuacion_MVC.Models;
+using Microsoft.CodeAnalysis.VisualBasic;
 
 namespace Factuacion_MVC.Controllers
 {
@@ -21,6 +22,15 @@ namespace Factuacion_MVC.Controllers
         // GET: Tblfacturas
         public async Task<IActionResult> Index()
         {
+            //var facturas = from Tblfactura in _context.Tblfacturas select Tblfactura;
+
+            //if (!string.IsNullOrEmpty(buscar))
+            //{
+            //    facturas = facturas.Where(s => s.IdClienteNavigation.StrNombre!.Contains(buscar));
+            //}
+
+            //return View(await facturas.ToListAsync());
+
             var dbfacturasContext = _context.Tblfacturas.Include(t => t.IdClienteNavigation).Include(t => t.IdEmpleadoNavigation).Include(t => t.IdEstadoNavigation);
             return View(await dbfacturasContext.ToListAsync());
         }
@@ -49,9 +59,9 @@ namespace Factuacion_MVC.Controllers
         // GET: Tblfacturas/Create
         public IActionResult Create()
         {
-            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "IdCliente");
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado");
-            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "IdEstadoFactura");
+            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "StrNombre");
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre");
+            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "StrDescripcion");
             return View();
         }
 
@@ -64,13 +74,16 @@ namespace Factuacion_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                tblfactura.DtmFechaModifica = DateTime.Now;
+                tblfactura.StrUsuarioModifica = "Javier";
+
                 _context.Add(tblfactura);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "IdCliente", tblfactura.IdCliente);
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblfactura.IdEmpleado);
-            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "IdEstadoFactura", tblfactura.IdEstado);
+            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "StrNombre", tblfactura.IdCliente);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblfactura.IdEmpleado);
+            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "StrDescripcion", tblfactura.IdEstado);
             return View(tblfactura);
         }
 
@@ -87,9 +100,9 @@ namespace Factuacion_MVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "IdCliente", tblfactura.IdCliente);
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblfactura.IdEmpleado);
-            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "IdEstadoFactura", tblfactura.IdEstado);
+            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "StrNombre", tblfactura.IdCliente);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblfactura.IdEmpleado);
+            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "StrDescripcion", tblfactura.IdEstado);
             return View(tblfactura);
         }
 
@@ -109,6 +122,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblfactura.DtmFechaModifica = DateTime.Now;
+                    tblfactura.StrUsuarioModifica = "Javier";
+
                     _context.Update(tblfactura);
                     await _context.SaveChangesAsync();
                 }
@@ -125,9 +141,9 @@ namespace Factuacion_MVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "IdCliente", tblfactura.IdCliente);
-            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "IdEmpleado", tblfactura.IdEmpleado);
-            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "IdEstadoFactura", tblfactura.IdEstado);
+            ViewData["IdCliente"] = new SelectList(_context.Tblclientes, "IdCliente", "StrNombre", tblfactura.IdCliente);
+            ViewData["IdEmpleado"] = new SelectList(_context.Tblempleados, "IdEmpleado", "StrNombre", tblfactura.IdEmpleado);
+            ViewData["IdEstado"] = new SelectList(_context.TblestadoFacturas, "IdEstadoFactura", "StrDescripcion", tblfactura.IdEstado);
             return View(tblfactura);
         }
 

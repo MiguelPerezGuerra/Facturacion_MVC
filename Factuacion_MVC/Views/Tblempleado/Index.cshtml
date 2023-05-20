@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <div class="search-box d-flex w-100">
-                    <button type="submit" class="btn ">
+                    <button type="submit" class="btn btnSearch">
                         <i class="bi bi-search"></i>     
                     </button>
                     <input type="text" name="buscar" class="form-control " placeholder="Buscar&hellip;" />
@@ -51,7 +51,7 @@
                 <th>
                     Fecha de Retiro
                 </th>
-                <th>
+                <th class="campoAcciones">
                     Acciones
                 </th>
             </tr>
@@ -81,7 +81,7 @@
                     @Html.DisplayFor(modelItem => item.DtmRetiro)
                 </td>
 
-                    <td class="text-center">
+                    <td class="text-center campoAcciones">
                         <a asp-action="Edit" class="text-primary ps-1 pe-1" asp-route-id="@item.IdEmpleado"><i class="bi bi-pencil-fill"></i></a> |
                         <a asp-action="Details" class="text-warning ps-1 pe-1" asp-route-id="@item.IdEmpleado"><i class="bi bi-eye-fill"></i></a> |
                         <a asp-action="Delete" class="text-danger ps-1 pe-1" asp-route-id="@item.IdEmpleado"><i class="bi bi-trash-fill"></i></a>

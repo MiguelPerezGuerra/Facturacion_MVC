@@ -11,65 +11,53 @@
 
         <h4 class="mt-2 titulos">Factura</h4>
         <hr />
-        <div class="col-6">
+        <div class="col-6 w-50">
             <dl class="row ms-3">
                 <dt class="col-sm-4">
-                    Fecha
+                    Fecha:
                 </dt>
                 <dd class="col-sm-8">
                     @Html.DisplayFor(model => model.DtmFecha)
                 </dd>
                 <dt class="col-sm-4">
-                    Precio de Descuento
+                    Precio de Descuento:
                 </dt>
                 <dd class="col-sm-8">
                     @Html.DisplayFor(model => model.NumDescuento)
                 </dd>
                 <dt class="col-sm-4">
-                    Valor Impuesto
+                    Valor Impuesto:
                 </dt>
                 <dd class="col-sm-8">
                     @Html.DisplayFor(model => model.NumImpuesto)
                 </dd>
                 <dt class="col-sm-4">
-                    Valor Total
+                    Valor Total:
                 </dt>
                 <dd class="col-sm-8">
                     @Html.DisplayFor(model => model.NumValorTotal)
                 </dd>
                 <dt class="col-sm-4">
-                    Fecha Modificación
+                    Cliente:
                 </dt>
                 <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.DtmFechaModifica)
+                    @Html.DisplayFor(model => model.IdClienteNavigation.StrNombre)
                 </dd>
                 <dt class="col-sm-4">
-                    Usuario Modifica
+                    Empleado:
                 </dt>
                 <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.StrUsuarioModifica)
+                    @Html.DisplayFor(model => model.IdEmpleadoNavigation.StrNombre)
                 </dd>
                 <dt class="col-sm-4">
-                    ID Cliente
+                    Estado:
                 </dt>
                 <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.IdClienteNavigation.IdCliente)
-                </dd>
-                <dt class="col-sm-4">
-                    ID Empleado
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.IdEmpleadoNavigation.IdEmpleado)
-                </dd>
-                <dt class="col-sm-4">
-                    ID Estado
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.IdEstadoNavigation.IdEstadoFactura)
+                    @Html.DisplayFor(model => model.IdEstadoNavigation.StrDescripcion)
                 </dd>
             </dl>
 
-            <div class="d-flex w-50 justify-content-center align-items-center">
+            <div class="d-flex w-50 mt-3 justify-content-center align-items-center">
                 <a asp-action="Edit" class="btn btn-outline-primary me-2" asp-route-id="@Model?.IdFactura">Editar</a>
                 <a asp-action="Index" class="btn btn-outline-warning ms-2">Volver</a>
             </div>

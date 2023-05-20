@@ -1,10 +1,13 @@
-﻿using System;
+﻿using MessagePack;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Factuacion_MVC.Models;
 
 public partial class TbldetalleFactura
 {
+    [System.ComponentModel.DataAnnotations.Key]
     public int IdDetalle { get; set; }
 
     public int IdFactura { get; set; }

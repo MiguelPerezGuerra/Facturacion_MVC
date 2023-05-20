@@ -11,8 +11,8 @@
         
         <h4 class="mt-2 titulos">Cliente</h4>
         <hr />
-        <h3 class="mb-2 ms-4 fw-normal">¿Seguro de eliminar esto?</h3>
-        <div class="col-6">
+        <h3 class="mb-2 ms-4 mb-2 fw-normal">¿Seguro de eliminar esto?</h3>
+        <div class="col-6 w-50">
             <dl class="row ms-3">
                 <dt class = "col-sm-4">
                     Nombre:
@@ -44,20 +44,8 @@
                 <dd class = "col-sm-8">
                     @Html.DisplayFor(model => model.StrEmail)
                 </dd>
-                <dt class = "col-sm-4">
-                    Fecha Modificación:
-                </dt>
-                <dd class = "col-sm-8">
-                    @Html.DisplayFor(model => model.DtmFechaModifica)
-                </dd>
-                <dt class = "col-sm-4">
-                    Usuario Modifico:
-                </dt>
-                <dd class = "col-sm-8">
-                    @Html.DisplayFor(model => model.StrUsuarioModifica)
-                </dd>
 
-                <div class="d-flex w-50 justify-content-center align-items-center mt-3">
+                <div class="d-flex w-50 mt-3 justify-content-center align-items-center">
                     <form asp-action="Delete">
                         <input type="hidden" asp-for="IdCliente" />
                         <input type="submit" value="Eliminar" class="btn btn-outline-danger me-2" />

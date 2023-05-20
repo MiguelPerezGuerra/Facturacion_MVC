@@ -19,11 +19,16 @@ namespace Factuacion_MVC.Controllers
         }
 
         // GET: Tblclientes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-              return _context.Tblclientes != null ? 
-                          View(await _context.Tblclientes.ToListAsync()) :
-                          Problem("Entity set 'DbfacturasContext.Tblclientes'  is null.");
+            var clientes = from Tblcliente in _context.Tblclientes select Tblcliente;
+
+            if (!string.IsNullOrEmpty(buscar))
+            {
+                clientes = clientes.Where(s => s.StrNombre!.Contains(buscar));
+            }
+
+            return View(await clientes.ToListAsync());
         }
 
         // GET: Tblclientes/Details/5
@@ -59,6 +64,9 @@ namespace Factuacion_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                tblcliente.DtmFechaModifica = DateTime.Now;
+                tblcliente.StrUsuarioModifica = "Javier";
+
                 _context.Add(tblcliente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +106,9 @@ namespace Factuacion_MVC.Controllers
             {
                 try
                 {
+                    tblcliente.DtmFechaModifica = DateTime.Now;
+                    tblcliente.StrUsuarioModifica = "Javier";
+
                     _context.Update(tblcliente);
                     await _context.SaveChangesAsync();
                 }

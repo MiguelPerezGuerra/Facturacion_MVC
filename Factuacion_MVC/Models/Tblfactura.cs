@@ -1,12 +1,17 @@
-﻿using System;
+﻿using MessagePack;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Factuacion_MVC.Models;
 
 public partial class Tblfactura
 {
+    [System.ComponentModel.DataAnnotations.Key]
     public int IdFactura { get; set; }
 
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime? DtmFecha { get; set; }
 
     public int IdCliente { get; set; }

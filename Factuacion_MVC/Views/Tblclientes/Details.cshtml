@@ -11,7 +11,7 @@
 
         <h4 class="mt-2 titulos">Cliente</h4>
         <hr />
-        <div class="col-6">
+        <div class="col-6 w-50">
 
             <dl class="row ms-3">
                 <dt class="col-sm-4">
@@ -44,21 +44,9 @@
                 <dd class="col-sm-8">
                     @Html.DisplayFor(model => model.StrEmail)
                 </dd>
-                <dt class="col-sm-4">
-                    Fecha Modificación:
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.DtmFechaModifica)
-                </dd>
-                <dt class="col-sm-4">
-                    Usuario Modifico:
-                </dt>
-                <dd class="col-sm-8">
-                    @Html.DisplayFor(model => model.StrUsuarioModifica)
-                </dd>
             </dl>
 
-            <div class="d-flex w-50 justify-content-center align-items-center">
+            <div class="d-flex w-50 mt-3 justify-content-center align-items-center">
                 <a asp-action="Edit" class="btn btn-outline-primary me-2" asp-route-id="@Model?.IdCliente">Editar</a>
                 <a asp-action="Index" class="btn btn-outline-warning ms-2">Volver</a>
             </div>
